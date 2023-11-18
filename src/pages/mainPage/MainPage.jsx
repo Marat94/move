@@ -9,16 +9,16 @@ const MainPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [activeVideo, setActiveVideo] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(
-    sessionStorage.getItem('moveiId')
-      ? jsonData.tendingNow.filter(v => +v.id === +sessionStorage.getItem('moveiId'))[0]
+    sessionStorage.getItem('movieId')
+      ? jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0]
       : jsonData.featured
   );
 
 
   useEffect(() => {
     setTimeout(() => {
-      !!sessionStorage.getItem('movieId') && setActiveVideo(jsonData.tendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0].VideoUrl)
-    }, 2000)
+      !!sessionStorage.getItem('movieId') && setActiveVideo(jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0].VideoUrl)
+    }, 3000)
   }, []);
 
   const _onHandleCloseNavbar = () => {
@@ -32,7 +32,7 @@ const MainPage = () => {
     return hours + "h " + minutes + "m";
   };
 
-  const sortedTrendingNow = [...jsonData.tendingNow].sort((a, b) => {
+  const sortedTrendingNow = [...jsonData.trendingNow].sort((a, b) => {
     const dateA = new Date(a.Date);
     const dateB = new Date(b.Date);
 
@@ -40,7 +40,7 @@ const MainPage = () => {
   });
 
   const _onHandleAddSessionStorage = (id) => {
-    sessionStorage.setItem('moveId', id);
+    sessionStorage.setItem('movieId', id);
   };
 
   const _onHandleChangeMovie = (movie) => {
@@ -49,7 +49,7 @@ const MainPage = () => {
     setActiveVideo('')
     setTimeout(() => {
       setActiveVideo(movie.VideoUrl)
-    }, 2000)
+    }, 3000)
   };
 
 
@@ -63,7 +63,7 @@ const MainPage = () => {
       <div id='main_page' onClick={_onHandleCloseNavbar}>
         <div className="main_page_container">
           {!activeVideo && (
-            <img className='mpc_photo' src={`/assets/${selectedMovie.CoverImage}`} alt="Icon"/>
+            <img className='mpc_photo' src={`/assets/${selectedMovie.backgroundImg}`} alt="Icon"/>
           )}
           {!!activeVideo && (
             <iframe
@@ -80,7 +80,8 @@ const MainPage = () => {
         </div>
         <div className="main_page_film_description">
           <span className='category'>{selectedMovie.Category}</span>
-          <span className='title'>{selectedMovie.Title}</span>
+          <img src={`/assets/${selectedMovie.TitleImage}`} alt="title"/>
+          {/*<span>{selectedMovie.Title}</span>*/}
           <span
             className='info'>{selectedMovie.ReleaseYear} {selectedMovie.MpaRating} {formatTimeFromSeconds(selectedMovie.Duration)}</span>
           <span className='description'>{selectedMovie.Description}</span>

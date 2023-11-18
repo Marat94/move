@@ -3,27 +3,30 @@
     "id": "1",
     "Title": "The Irishman",
     "CoverImage": "FeaturedCoverImage.png",
+    "backgroundImg": "FeaturedCoverImage.png",
     "TitleImage": "FeaturedTitleImage.png",
     "Date": "2021-10-24T12:16:50.894556",
     "ReleaseYear": "2021",
     "MpaRating": "18+",
     "Category": "Movie",
     "Duration": "6000",
-    "Description": "Info About it"
+    "Description": "An illustration of Frank Sheeran's life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa."
   },
-  "tendingNow": [
+  "trendingNow": [
     {
       "id": "1",
-      "Title": "Title 1",
-      "CoverImage": "https_specials-1.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "Title": "Oppenheimer",
+      "titleImg": "",
+      "CoverImage": "oppenheimerCover.png",
+      "backgroundImg": "oppenheimerBackground.png",
+      "TitleImage": "oppenheimerTitle.png",
       "Date": "2021-10-24T12:16:50.894556",
-      "ReleaseYear": "2021",
+      "ReleaseYear": "2023",
       "MpaRating": "18+",
       "Category": "Movie",
       "Duration": "2000",
       "VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "Description": "Info About it"
+      "Description": "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb."
     },
     {
       "id": "2",
@@ -80,15 +83,16 @@
     {
       "id": "6",
       "Title": "Title 6",
-      "CoverImage": "https_specials-6.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "CoverImage": "johnWickCover.png",
+      "backgroundImg": "johnWickBackground.png",
+      "TitleImage": "johnWickTitle.png",
       "Date": "2021-10-22T12:16:50.894556",
       "ReleaseYear": "2021",
       "MpaRating": "18+",
-      "Category": "TV Show",
+      "Category": "Movie",
       "Duration": "1200",
       "VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "Description": "Info About it"
+      "Description": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes."
     },
     {
       "id": "7",
@@ -118,16 +122,17 @@
     },
     {
       "id": "9",
-      "Title": "Title 9",
-      "CoverImage": "https_specials-1.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "Title": "Green Book",
+      "CoverImage": "greenBook_cover.png",
+      "backgroundImg": "backgroundImg_green_book.png",
+      "TitleImage": "greenBookTitle.png",
       "Date": "2021-04-03T12:16:50.894556",
-      "ReleaseYear": "2021",
+      "ReleaseYear": "2018",
       "MpaRating": "18+",
       "Category": "Movie",
       "Duration": "2300",
       "VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "Description": "Info About it"
+      "Description": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South."
     },
     {
       "id": "10",
@@ -157,16 +162,17 @@
     },
     {
       "id": "12",
-      "Title": "Title 12",
+      "Title": "Red Notice",
       "CoverImage": "https_specials-4.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "backgroundImg": "backgroundImgRedNotice.png",
+      "TitleImage": "redNoticeTitle.png",
       "Date": "2021-03-03T12:16:50.894556",
       "ReleaseYear": "2021",
       "MpaRating": "18+",
       "Category": "Movie",
       "Duration": "3400",
       "VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "Description": "Info About it"
+      "Description": "An Interpol agent successfully tracks down the world's most wanted art thief with help from a rival thief. But nothing is as it seems as a series of double-crosses ensues."
     },
     {
       "id": "13",
@@ -184,8 +190,9 @@
     {
       "id": "14",
       "Title": "Title 14",
-      "CoverImage": "https_specials-6.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "CoverImage": "equalizerCover.png",
+      "backgroundImg": "equalizerBackground.png",
+      "TitleImage": "equalizerTitle.png",
       "Date": "2021-07-10T12:16:50.894556",
       "ReleaseYear": "2021",
       "MpaRating": "18+",
@@ -196,42 +203,45 @@
     },
     {
       "id": "15",
-      "Title": "Title 15",
+      "Title": "Sherlock",
       "CoverImage": "https_specials-7.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "backgroundImg": "backgroundImg_sherlock.png",
+      "TitleImage": "sherlockTitle.png",
       "Date": "2021-05-14T12:16:50.894556",
-      "ReleaseYear": "2021",
+      "ReleaseYear": "2010-2017",
       "MpaRating": "18+",
       "Category": "Movie",
       "Duration": "1300",
       "VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "Description": "Info About it"
+      "Description": "The quirky spin on Conan Doyle's iconic sleuth pitches him as a \"high-functioning sociopath\" in modern-day London. Assisting him in his investigations: Afghanistan War vet John Watson, who's introduced to Holmes by a mutual acquaintance."
     },
     {
       "id": "16",
-      "Title": "Title 16",
+      "Title": "Kate",
       "CoverImage": "https_specials-8.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "backgroundImg": "backgroundImg_kate.png",
+      "TitleImage": "kateTitle.png",
       "Date": "2021-03-25T12:16:50.894556",
       "ReleaseYear": "2021",
       "MpaRating": "18+",
       "Category": "Movie",
       "Duration": "5000",
       "VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "Description": "Info About it"
+      "Description": "A jaded assassin assigned to target a yakuza clan has 24 hours to find out who poisoned her and get vengeance before she dies."
     },
     {
       "id": "17",
-      "Title": "Title 17",
-      "CoverImage": "https_specials-1.png",
-      "TitleImage": "FeaturedTitleImage.png",
+      "Title": "Loki",
+      "CoverImage": "lokiCover.png",
+      "backgroundImg": "backgroundImgLoki.png",
+      "TitleImage": "lokiTitle.png",
       "Date": "2021-08-24T12:16:50.894556",
-      "ReleaseYear": "2021",
+      "ReleaseYear": "2021-2023",
       "MpaRating": "18+",
-      "Category": "TV Show",
+      "Category": "TV Series",
       "Duration": "400",
       "VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "Description": "Info About it"
+      "Description": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”"
     },
     {
       "id": "18",
