@@ -8,12 +8,16 @@ const MainPage = () => {
 
   const [showNavbar, setShowNavbar] = useState(false);
   const [activeVideo, setActiveVideo] = useState('');
-  const [selectedMove, setSelectedMove] = useState(sessionStorage.getItem('moveId') ? jsonData.tendingNow.filter(v => +v.id === +sessionStorage.getItem('moveId'))[0] : jsonData.featured);
+  const [selectedMovie, setSelectedMovie] = useState(
+    sessionStorage.getItem('moveiId')
+      ? jsonData.tendingNow.filter(v => +v.id === +sessionStorage.getItem('moveiId'))[0]
+      : jsonData.featured
+  );
 
 
   useEffect(() => {
     setTimeout(() => {
-      !!sessionStorage.getItem('moveId') && setActiveVideo(jsonData.tendingNow.filter(v => +v.id === +sessionStorage.getItem('moveId'))[0].VideoUrl)
+      !!sessionStorage.getItem('movieId') && setActiveVideo(jsonData.tendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0].VideoUrl)
     }, 2000)
   }, []);
 
@@ -39,12 +43,12 @@ const MainPage = () => {
     sessionStorage.setItem('moveId', id);
   };
 
-  const _onHandleChangeMove = (move) => {
-    _onHandleAddSessionStorage(move.id)
-    setSelectedMove(move)
+  const _onHandleChangeMovie = (movie) => {
+    _onHandleAddSessionStorage(movie.id)
+    setSelectedMovie(movie)
     setActiveVideo('')
     setTimeout(() => {
-      setActiveVideo(move.VideoUrl)
+      setActiveVideo(movie.VideoUrl)
     }, 2000)
   };
 
@@ -59,7 +63,7 @@ const MainPage = () => {
       <div id='main_page' onClick={_onHandleCloseNavbar}>
         <div className="main_page_container">
           {!activeVideo && (
-            <img className='mpc_photo' src={`/assets/${selectedMove.CoverImage}`} alt="Icon"/>
+            <img className='mpc_photo' src={`/assets/${selectedMovie.CoverImage}`} alt="Icon"/>
           )}
           {!!activeVideo && (
             <iframe
@@ -75,11 +79,11 @@ const MainPage = () => {
 
         </div>
         <div className="main_page_film_description">
-          <span className='category'>{selectedMove.Category}</span>
-          <span className='title'>{selectedMove.Title}</span>
+          <span className='category'>{selectedMovie.Category}</span>
+          <span className='title'>{selectedMovie.Title}</span>
           <span
-            className='info'>{selectedMove.ReleaseYear} {selectedMove.MpaRating} {formatTimeFromSeconds(selectedMove.Duration)}</span>
-          <span className='description'>{selectedMove.Description}</span>
+            className='info'>{selectedMovie.ReleaseYear} {selectedMovie.MpaRating} {formatTimeFromSeconds(selectedMovie.Duration)}</span>
+          <span className='description'>{selectedMovie.Description}</span>
           <div className="video_buttons">
             <button className='play_video'>
               <img src="/assets/icons/play-button.png" alt="Play"/>
@@ -92,12 +96,12 @@ const MainPage = () => {
         </div>
         <div className="films_carusel">
           <ScrollingCarousel>
-            {sortedTrendingNow.map(move => (
+            {sortedTrendingNow.map(movie => (
               <img
-                src={`/assets/${move.CoverImage}`}
+                src={`/assets/${movie.CoverImage}`}
                 alt="Films"
-                onClick={() => _onHandleChangeMove(move)}
-                key={move.id}
+                onClick={() => _onHandleChangeMovie(movie)}
+                key={movie.id}
               />
             ))}
           </ScrollingCarousel>
