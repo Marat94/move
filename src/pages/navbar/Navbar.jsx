@@ -14,7 +14,7 @@ const navbarItem = [
   {
     id: 3,
     icon: "/assets/icons/tv_show.png",
-    name: "TV Shows"
+    name: "TV Series"
   },
   {
     id: 4,

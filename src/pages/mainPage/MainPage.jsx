@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollingCarousel} from '@trendyol-js/react-carousel';
+import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 import jsonData from '../../data.json';
 import Navbar from "../navbar/Navbar";
 import './mainPage.css'
@@ -63,27 +63,28 @@ const MainPage = () => {
       <div id='main_page' onClick={_onHandleCloseNavbar}>
         <div className="main_page_container">
           {!activeVideo && (
-            <img className='mpc_photo' src={`/assets/${selectedMovie.backgroundImg}`} alt="Icon"/>
+            <img className='mpc_photo' src={selectedMovie.backgroundImg} alt="Icon"/>
           )}
           {!!activeVideo && (
-            <iframe
-              className='mpc_photo'
-              width="640"
-              height="360"
-              src={activeVideo}
-              title="Video Player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+              <iframe
+                className='mpc_photo'
+                width="640"
+                height="360"
+                src={activeVideo}
+                title="Video Player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                onClick={_onHandleCloseNavbar}
+              />
           )}
 
         </div>
         <div className="main_page_film_description">
           <span className='category'>{selectedMovie.Category}</span>
-          <img src={`/assets/${selectedMovie.TitleImage}`} alt="title"/>
-          {/*<span>{selectedMovie.Title}</span>*/}
-          <span
-            className='info'>{selectedMovie.ReleaseYear} {selectedMovie.MpaRating} {formatTimeFromSeconds(selectedMovie.Duration)}</span>
+          <img src={selectedMovie.TitleImage} alt="title"/>
+          <span className='info'>
+            {selectedMovie.ReleaseYear} {selectedMovie.MpaRating} {formatTimeFromSeconds(selectedMovie.Duration)}
+          </span>
           <span className='description'>{selectedMovie.Description}</span>
           <div className="video_buttons">
             <button className='play_video'>
@@ -99,7 +100,7 @@ const MainPage = () => {
           <ScrollingCarousel>
             {sortedTrendingNow.map(movie => (
               <img
-                src={`/assets/${movie.CoverImage}`}
+                src={movie.CoverImage}
                 alt="Films"
                 onClick={() => _onHandleChangeMovie(movie)}
                 key={movie.id}
