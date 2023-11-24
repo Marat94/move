@@ -1,269 +1,441 @@
 {
   "featured": {
     "id": "1",
-    "Title": "The Irishman",
-    "CoverImage": "/assets/FeaturedCoverImage.png",
+    "title": "The Irishman",
+    "cover": "/assets/Featuredcover.png",
     "backgroundImg": "/assets/theIrishmanBackground.png",
-    "TitleImage": "/assets/FeaturedTitleImage.png",
-    "Date": "2021-10-24T12:16:50.894556",
-    "ReleaseYear": "2021",
-    "MpaRating": "18+",
+    "titleImage": "/assets/FeaturedtitleImage.png",
+    "date": "2021-10-24T12:16:50.894556",
+    "releaseYear": "2021",
+    "mpaRating": "18+",
     "Category": "Movie",
-    "Duration": "6000",
-    "Description": "An illustration of Frank Sheeran's life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa."
+    "duration": "6000",
+    "description": "An illustration of Frank Sheeran's life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa."
   },
   "trendingNow": [
     {
       "id": "1",
-      "Title": "Oppenheimer",
-      "CoverImage": "/assets/oppenheimerCover.png",
+      "title": "Oppenheimer",
+      "cover": "/assets/oppenheimerCover.png",
       "backgroundImg": "/assets/oppenheimerBackground.png",
-      "TitleImage": "/assets/oppenheimerTitle.png",
-      "Date": "2021-10-24T12:16:50.894556",
-      "ReleaseYear": "2023",
-      "MpaRating": "18+",
+      "titleImage": "/assets/oppenheimertitle.png",
+      "date": "2021-10-24T12:16:50.894556",
+      "releaseYear": "2023",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "2000",
-      "VideoUrl": "/assets/videos/oppenheimer.mp4",
-      "Description": "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb."
+      "duration": "3h",
+      "video": "/assets/videos/oppenheimer.mp4",
+      "description": "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.",
+      "director": {
+        "name": "Christopher Nolan",
+        "link": "https://en.wikipedia.org/wiki/Christopher_Nolan"
+      },
+      "actors": [
+        {
+          "name": "Cillian Murphy •",
+          "link": "https://en.wikipedia.org/wiki/Cillian_Murphy"
+        },
+        {
+          "name": "Robert Downey Jr. •",
+          "link": "https://en.wikipedia.org/wiki/Robert_Downey_Jr."
+        },
+        {
+          "name": "Matt Damon •",
+          "link": "https://en.wikipedia.org/wiki/Matt_Damon"
+        },
+        {
+          "name": "Emily Blunt",
+          "link": "https://en.wikipedia.org/wiki/Emily_Blunt"
+        }
+      ]
     },
     {
       "id": "2",
-      "Title": "Fast & Furious",
-      "CoverImage": "/assets/fastCover.png",
+      "title": "Fast & Furious",
+      "cover": "/assets/fastCover.png",
       "backgroundImg": "/assets/fastBackground.png",
-      "TitleImage": "/assets/fastTitle.png",
-      "Date": "2021-10-12T12:16:50.894556",
-      "ReleaseYear": "2023",
-      "MpaRating": "18+",
+      "titleImage": "/assets/fasttitle.png",
+      "date": "2021-10-12T12:16:50.894556",
+      "releaseYear": "2023",
+      "mpaRating": "13+",
       "Category": "Movie",
-      "Duration": "2300",
-      "VideoUrl": "/assets/videos/fastVideo.mp4",
-      "Description": "Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes."
+      "duration": "2h 21m",
+      "video": "/assets/videos/fastVideo.mp4",
+      "description": "Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.",
+      "actor": "Benedict Cumberbatch",
+      "castLink": "https://en.wikipedia.org/wiki/Benedict_Cumberbatch",
+      "director": {
+        "name": "Louis Leterrier",
+        "link": "https://en.wikipedia.org/wiki/Louis_Leterrier"
+      },
+      "actors": [
+        {
+          "name": "Vin Diesel •",
+          "link": "https://en.wikipedia.org/wiki/Vin_Diesel"
+        },
+        {
+          "name": "Jason Statham •",
+          "link": "https://en.wikipedia.org/wiki/Jason_Statham"
+        },
+        {
+          "name": "Michelle Rodriguez",
+          "link": "https://en.wikipedia.org/wiki/Michelle_Rodriguez"
+        }
+      ]
     },
     {
       "id": "3",
-      "Title": "Spider Man",
-      "CoverImage": "/assets/spiderManCover.png",
+      "title": "Spider Man: No Way Home",
+      "cover": "/assets/spiderManCover.png",
       "backgroundImg": "/assets/spiderManBackground.png",
-      "TitleImage": "/assets/spiderManTitle.png",
-      "Date": "2021-10-11T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
+      "titleImage": "/assets/spiderMantitle.png",
+      "date": "2021-10-11T12:16:50.894556",
+      "releaseYear": "2021",
+      "mpaRating": "12+",
       "Category": "Movie",
-      "Duration": "6000",
-      "VideoUrl": "/assets/videos/spiderMan.mp4",
-      "Description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+      "duration": "2h 28m",
+      "video": "/assets/videos/spiderMan.mp4",
+      "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+      "director": {
+        "name": "Jon Watts",
+        "link": "https://en.wikipedia.org/wiki/Jon_Watts"
+      },
+      "actors": [
+        {
+          "name": "Tom Holland •",
+          "link": "https://en.wikipedia.org/wiki/Tom_Holland"
+        },
+        {
+          "name": "Zendaya •",
+          "link": "https://en.wikipedia.org/wiki/Zendaya"
+        },
+        {
+          "name": "Benedict Cumberbatch",
+          "link": "https://en.wikipedia.org/wiki/Benedict_Cumberbatch"
+        }
+      ]
     },
     {
       "id": "4",
-      "Title": "The Covenant",
-      "CoverImage": "/assets/theCovenantCover.png",
+      "title": "The Covenant",
+      "cover": "/assets/theCovenantCover.png",
       "backgroundImg": "/assets/theCovenantBackground.png",
-      "TitleImage": "/assets/theCovenant.png",
-      "Date": "2021-10-10T12:16:50.894556",
-      "ReleaseYear": "2023",
-      "MpaRating": "18+",
+      "titleImage": "/assets/theCovenant.png",
+      "date": "2021-10-10T12:16:50.894556",
+      "releaseYear": "2023",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "4000",
-      "VideoUrl": "/assets/videos/theCovenant.mp4",
-      "Description": "During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of grueling terrain."
+      "duration": "2h 3m",
+      "video": "/assets/videos/theCovenant.mp4",
+      "description": "During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of grueling terrain.",
+      "director": {
+        "name": "Guy Ritchie",
+        "link": "https://en.wikipedia.org/wiki/Guy_Ritchie"
+      },
+      "actors": [
+        {
+          "name": "Jake Gyllenhaal •",
+          "link": "https://en.wikipedia.org/wiki/Jake_Gyllenhaal"
+        },
+        {
+          "name": "Dar Salim",
+          "link": "https://en.wikipedia.org/wiki/Dar_Salim"
+        }
+      ]
     },
     {
       "id": "5",
-      "Title": "Avengers EndGame",
-      "CoverImage": "/assets/avengersCover.png",
+      "title": "Avengers: ENDGAME",
+      "cover": "/assets/avengersCover.png",
       "backgroundImg": "/assets/avengersBackground.png",
-      "TitleImage": "/assets/avengersTitle.png",
-      "Date": "2021-10-15T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
+      "titleImage": "/assets/avengersTitle.png",
+      "date": "2021-10-15T12:16:50.894556",
+      "releaseYear": "2019",
+      "mpaRating": "16+",
       "Category": "Movie",
-      "Duration": "5300",
-      "VideoUrl": "/assets/videos/avengers.mp4",
-      "Description": "After the devastating events of Мстители: Война бесконечности (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+      "duration": "3h 1m",
+      "video": "/assets/videos/avengers.mp4",
+      "description": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+      "director": {
+        "name": "Russo brothers",
+        "link": "https://en.wikipedia.org/wiki/Russo_brothers"
+      },
+      "actors": [
+        {
+          "name": "Robert Downey Jr. •",
+          "link": "https://en.wikipedia.org/wiki/Robert_Downey_Jr."
+        },
+        {
+          "name": "Chris Evans •",
+          "link": "https://en.wikipedia.org/wiki/Chris_Evans_(actor)"
+        },
+        {
+          "name": "Chris Hemsworth •",
+          "link": "https://en.wikipedia.org/wiki/Chris_Hemsworth"
+        },
+        {
+          "name": "Mark Ruffalo •",
+          "link": "https://en.wikipedia.org/wiki/Mark_Ruffalo"
+        },
+        {
+          "name": "Scarlett Johansson •",
+          "link": "https://en.wikipedia.org/wiki/Scarlett_Johansson"
+        },
+        {
+          "name": "Jeremy Renner •",
+          "link": "https://en.wikipedia.org/wiki/Jeremy_Renner"
+        }
+      ]
     },
     {
       "id": "6",
-      "Title": "John Wick",
-      "CoverImage": "/assets/johnWickCover.png",
+      "title": "John Wick: Chapter 4",
+      "cover": "/assets/johnWickCover.png",
       "backgroundImg": "/assets/johnWickBackground.png",
-      "TitleImage": "/assets/johnWickTitle.png",
-      "Date": "2021-10-22T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
+      "titleImage": "/assets/johnWickTitle.png",
+      "date": "2021-10-22T12:16:50.894556",
+      "releaseYear": "2023",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "1200",
-      "VideoUrl": "/assets/videos/johnWick.mp4",
-      "Description": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes."
+      "duration": "2h 49m",
+      "video": "/assets/videos/johnWick.mp4",
+      "description": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+      "director": {
+        "name": "Chad Stahelski",
+        "link": "https://en.wikipedia.org/wiki/Chad_Stahelski"
+      },
+      "actors": [
+        {
+          "name": "Keanu Reeves •",
+          "link": "https://en.wikipedia.org/wiki/Keanu_Reeves"
+        },
+        {
+          "name": "Laurence Fishburne •",
+          "link": "https://en.wikipedia.org/wiki/Laurence_Fishburne"
+        },
+        {
+          "name": "Ian McShane",
+          "link": "https://en.wikipedia.org/wiki/Ian_McShane"
+        }
+      ]
     },
     {
       "id": "7",
-      "Title": "The Bee Keeper",
-      "CoverImage": "/assets/theBeeKeeperCover.png",
+      "title": "The Bee Keeper",
+      "cover": "/assets/theBeeKeeperCover.png",
       "backgroundImg": "/assets/theBeeKeeperBackground.png",
-      "TitleImage": "/assets/theBeeKeeperTitle.png",
-      "Date": "2021-11-22T12:16:50.894556",
-      "ReleaseYear": "2024",
-      "MpaRating": "18+",
+      "titleImage": "/assets/theBeeKeeperTitle.png",
+      "date": "2021-11-22T12:16:50.894556",
+      "releaseYear": "2024",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "4500",
-      "VideoUrl": "assets/videos/theBeeKeeper.mp4",
-      "Description": "In The Beekeeper, one man's brutal campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as \"Beekeepers\"."
+      "duration": "1h 41m",
+      "video": "assets/videos/theBeeKeeper.mp4",
+      "description": "In The Beekeeper, one man's brutal campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as \"Beekeepers\".",
+      "director": {
+        "name": "David Ayer",
+        "link": "https://en.wikipedia.org/wiki/David_Ayer"
+      },
+      "actors": [
+        {
+          "name": "Jason Statham •",
+          "link": "https://en.wikipedia.org/wiki/Jason_Statham"
+        },
+        {
+          "name": "Jeremy Irons",
+          "link": "https://en.wikipedia.org/wiki/Jeremy_Irons"
+        }
+      ]
     },
     {
       "id": "8",
-      "Title": "The Marvels",
-      "CoverImage": "/assets/theMarvelsCover.png",
+      "title": "The Marvels",
+      "cover": "/assets/theMarvelsCover.png",
       "backgroundImg": "/assets/theMarvelsBackground.png",
-      "TitleImage": "/assets/theMarvelsTitle.png",
-      "Date": "2021-07-14T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
-      "Category": "TV Show",
-      "Duration": "2000",
-      "VideoUrl": "/assets/videos/theMarvels.mp4",
-      "Description": "Carol Danvers gets her powers entangled with those of Kamala Khan and Monica Rambeau, forcing them to work together to save the universe."
+      "titleImage": "/assets/theMarvelsTitle.png",
+      "date": "2021-07-14T12:16:50.894556",
+      "releaseYear": "2023",
+      "mpaRating": "13+",
+      "Category": "Movie",
+      "duration": "1h 45m",
+      "video": "/assets/videos/theMarvels.mp4",
+      "description": "Carol Danvers gets her powers entangled with those of Kamala Khan and Monica Rambeau, forcing them to work together to save the universe.",
+      "director": {
+        "name": "Nia DaCosta",
+        "link": "https://en.wikipedia.org/wiki/Nia_DaCosta"
+      },
+      "actors": [
+        {
+          "name": "Brie Larson •",
+          "link": "https://en.wikipedia.org/wiki/Brie_Larson"
+        },
+        {
+          "name": "Teyonah Parris •",
+          "link": "https://en.wikipedia.org/wiki/Teyonah_Parris"
+        },
+        {
+          "name": "Samuel L. Jackson",
+          "link": "https://en.wikipedia.org/wiki/Samuel_L._Jackson"
+        }
+      ]
     },
     {
       "id": "9",
-      "Title": "Green Book",
-      "CoverImage": "/assets/greenBook_cover.png",
+      "title": "Green Book",
+      "cover": "/assets/greenBook_cover.png",
       "backgroundImg": "/assets/greenBookBackground.png",
-      "TitleImage": "/assets/greenBookTitle.png",
-      "Date": "2021-04-03T12:16:50.894556",
-      "ReleaseYear": "2018",
-      "MpaRating": "18+",
+      "titleImage": "/assets/greenBookTitle.png",
+      "date": "2021-04-03T12:16:50.894556",
+      "releaseYear": "2018",
+      "mpaRating": "16+",
       "Category": "Movie",
-      "Duration": "2300",
-      "VideoUrl": "/assets/videos/greenBook.mp4",
-      "Description": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South."
+      "duration": "2h 10m",
+      "video": "/assets/videos/greenBook.mp4",
+      "description": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.",
+      "director": {
+        "name": "Peter Farrelly",
+        "link": "https://en.wikipedia.org/wiki/Peter_Farrelly"
+      },
+      "actors": [
+        {
+          "name": "Viggo Mortensen •",
+          "link": "https://en.wikipedia.org/wiki/Viggo_Mortensen"
+        },
+        {
+          "name": "Mahershala Ali •",
+          "link": "https://en.wikipedia.org/wiki/Mahershala_Ali"
+        },
+        {
+          "name": "Linda Cardellini",
+          "link": "https://en.wikipedia.org/wiki/Linda_Cardellini"
+        }
+      ]
     },
     {
       "id": "10",
-      "Title": "Creed III",
-      "CoverImage": "/assets/creedCover.png",
+      "title": "Creed III",
+      "cover": "/assets/creedCover.png",
       "backgroundImg": "/assets/creedBackground.png",
-      "TitleImage": "/assets/creedTitle.png",
-      "Date": "2021-11-23T12:16:50.894556",
-      "ReleaseYear": "2023",
-      "MpaRating": "18+",
+      "titleImage": "/assets/creedTitle.png",
+      "date": "2021-11-23T12:16:50.894556",
+      "releaseYear": "2023",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "6000",
-      "VideoUrl": "/assets/videos/creed.mp4",
-      "Description": "Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight."
+      "duration": "6000",
+      "video": "/assets/videos/creed.mp4",
+      "description": "Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight."
     },
     {
       "id": "11",
-      "Title": "Tulsa King",
-      "CoverImage": "/assets/tulsaKingCover.png",
+      "title": "Tulsa King",
+      "cover": "/assets/tulsaKingCover.png",
       "backgroundImg": "/assets/tulsaKingBackground.png",
-      "TitleImage": "/assets/tulsaKingTitle.png",
-      "Date": "2021-11-04T12:16:50.894556",
-      "ReleaseYear": "2022",
-      "MpaRating": "18+",
+      "titleImage": "/assets/tulsaKingTitle.png",
+      "date": "2021-11-04T12:16:50.894556",
+      "releaseYear": "2022",
+      "mpaRating": "18+",
       "Category": "TV Series",
-      "Duration": "1200",
-      "VideoUrl": "/assets/videos/tulsaKing.mp4",
-      "Description": "Following his release from prison, Mafia capo Dwight \"The General\" Manfredi is exiled to Tulsa, Oklahoma, where he builds a new criminal empire with a group of unlikely characters."
+      "duration": "1200",
+      "video": "/assets/videos/tulsaKing.mp4",
+      "description": "Following his release from prison, Mafia capo Dwight \"The General\" Manfredi is exiled to Tulsa, Oklahoma, where he builds a new criminal empire with a group of unlikely characters."
     },
     {
       "id": "12",
-      "Title": "Red Notice",
-      "CoverImage": "/assets/https_specials-4.png",
+      "title": "Red Notice",
+      "cover": "/assets/https_specials-4.png",
       "backgroundImg": "/assets/backgroundImgRedNotice.png",
-      "TitleImage": "/assets/redNoticeTitle.png",
-      "Date": "2021-03-03T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
+      "titleImage": "/assets/redNoticeTitle.png",
+      "date": "2021-03-03T12:16:50.894556",
+      "releaseYear": "2021",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "3400",
-      "VideoUrl": "/assets/videos/redNotice.mp4",
-      "Description": "An Interpol agent successfully tracks down the world's most wanted art thief with help from a rival thief. But nothing is as it seems as a series of double-crosses ensues."
+      "duration": "3400",
+      "video": "/assets/videos/redNotice.mp4",
+      "description": "An Interpol agent successfully tracks down the world's most wanted art thief with help from a rival thief. But nothing is as it seems as a series of double-crosses ensues."
     },
     {
       "id": "13",
-      "Title": "The Irishman",
-      "CoverImage": "/assets/theIrishmanCover.png",
+      "title": "The Irishman",
+      "cover": "/assets/theIrishmanCover.png",
       "backgroundImg": "/assets/theIrishmanBackground.png",
-      "TitleImage": "/assets/FeaturedTitleImage.png",
-      "Date": "2021-12-30T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
+      "titleImage": "/assets/FeaturedTitleImage.png",
+      "date": "2021-12-30T12:16:50.894556",
+      "releaseYear": "2021",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "6500",
-      "VideoUrl": "/assets/videos/theIrishman.mp4",
-      "Description": "An illustration of Frank Sheeran's life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa."
+      "duration": "6500",
+      "video": "/assets/videos/theIrishman.mp4",
+      "description": "An illustration of Frank Sheeran's life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa."
     },
     {
       "id": "14",
-      "Title": "The Equalizer 3",
-      "CoverImage": "/assets/equalizerCover.png",
+      "title": "The Equalizer 3",
+      "cover": "/assets/equalizerCover.png",
       "backgroundImg": "/assets/equalizerBackground.png",
-      "TitleImage": "/assets/equalizerTitle.png",
-      "Date": "2021-07-10T12:16:50.894556",
-      "ReleaseYear": "2023",
-      "MpaRating": "18+",
+      "titleImage": "/assets/equalizerTitle.png",
+      "date": "2021-07-10T12:16:50.894556",
+      "releaseYear": "2023",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "5000",
-      "VideoUrl": "/assets/videos/theEqualizer.mp4",
-      "Description": "Robert McCall finds himself at home in Southern Italy but he discovers his friends are under the control of local crime bosses. As events turn deadly, McCall knows what he has to do: become his friends' protector by taking on the mafia."
+      "duration": "5000",
+      "video": "/assets/videos/theEqualizer.mp4",
+      "description": "Robert McCall finds himself at home in Southern Italy but he discovers his friends are under the control of local crime bosses. As events turn deadly, McCall knows what he has to do: become his friends' protector by taking on the mafia."
     },
     {
       "id": "15",
-      "Title": "No Time to Die",
-      "CoverImage": "/assets/bondCover.png",
+      "title": "No Time to Die",
+      "cover": "/assets/bondCover.png",
       "backgroundImg": "/assets/bondBackground.png",
-      "TitleImage": "/assets/bondTitle.png",
-      "Date": "2021-05-14T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
+      "titleImage": "/assets/bondTitle.png",
+      "date": "2021-05-14T12:16:50.894556",
+      "releaseYear": "2021",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "1300",
-      "VideoUrl": "/assets/videos/noTimeToDie.mp4",
-      "Description": "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology."
+      "duration": "1300",
+      "video": "/assets/videos/noTimeToDie.mp4",
+      "description": "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology."
     },
     {
       "id": "16",
-      "Title": "Kate",
-      "CoverImage": "/assets/https_specials-8.png",
+      "title": "Kate",
+      "cover": "/assets/https_specials-8.png",
       "backgroundImg": "/assets/backgroundImg_kate.png",
-      "TitleImage": "/assets/kateTitle.png",
-      "Date": "2021-03-25T12:16:50.894556",
-      "ReleaseYear": "2021",
-      "MpaRating": "18+",
+      "titleImage": "/assets/kateTitle.png",
+      "date": "2021-03-25T12:16:50.894556",
+      "releaseYear": "2021",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "5000",
-      "VideoUrl": "/assets/videos/kate.mp4",
-      "Description": "A jaded assassin assigned to target a yakuza clan has 24 hours to find out who poisoned her and get vengeance before she dies."
+      "duration": "5000",
+      "video": "/assets/videos/kate.mp4",
+      "description": "A jaded assassin assigned to target a yakuza clan has 24 hours to find out who poisoned her and get vengeance before she dies."
     },
     {
       "id": "17",
-      "Title": "Loki",
-      "CoverImage": "/assets/lokiCover.png",
+      "title": "Loki",
+      "cover": "/assets/lokiCover.png",
       "backgroundImg": "/assets/backgroundImgLoki.png",
-      "TitleImage": "/assets/lokiTitle.png",
-      "Date": "2021-08-24T12:16:50.894556",
-      "ReleaseYear": "2021-2023",
-      "MpaRating": "18+",
+      "titleImage": "/assets/lokiTitle.png",
+      "date": "2021-08-24T12:16:50.894556",
+      "releaseYear": "2021-2023",
+      "mpaRating": "18+",
       "Category": "TV Series",
-      "Duration": "400",
-      "VideoUrl": "/assets/videos/loki.mp4",
-      "Description": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”"
+      "duration": "400",
+      "video": "/assets/videos/loki.mp4",
+      "description": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”"
     },
     {
       "id": "18",
-      "Title": "The Gentlemen",
-      "CoverImage": "/assets/theGentlemenCover.png",
+      "title": "The Gentlemen",
+      "cover": "/assets/theGentlemenCover.png",
       "backgroundImg": "/assets/theGentlemenBackground.png",
-      "TitleImage": "/assets/theGentlemenTitle.png",
-      "Date": "2021-07-21T12:16:50.894556",
-      "ReleaseYear": "2019",
-      "MpaRating": "18+",
+      "titleImage": "/assets/theGentlemenTitle.png",
+      "date": "2021-07-21T12:16:50.894556",
+      "releaseYear": "2019",
+      "mpaRating": "18+",
       "Category": "Movie",
-      "Duration": "1200",
-      "VideoUrl": "/assets/videos/theGentlemen.mp4",
-      "Description": "An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him."
+      "duration": "1200",
+      "video": "/assets/videos/theGentlemen.mp4",
+      "description": "An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him."
     }
   ]
 }

@@ -17,7 +17,7 @@ const MainPage = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      !!sessionStorage.getItem('movieId') && setActiveVideo(jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0].VideoUrl)
+      !!sessionStorage.getItem('movieId') && setActiveVideo(jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0].video)
     }, 3000)
   }, []);
 
@@ -33,8 +33,8 @@ const MainPage = () => {
   };
 
   const sortedTrendingNow = [...jsonData.trendingNow].sort((a, b) => {
-    const dateA = new Date(a.Date);
-    const dateB = new Date(b.Date);
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
 
     return dateA - dateB;
   });
@@ -48,7 +48,7 @@ const MainPage = () => {
     setSelectedMovie(movie)
     setActiveVideo('')
     setTimeout(() => {
-      setActiveVideo(movie.VideoUrl)
+      setActiveVideo(movie.video)
     }, 3000)
   };
 
@@ -81,11 +81,11 @@ const MainPage = () => {
         </div>
         <div className="main_page_film_description">
           <span className='category'>{selectedMovie.Category}</span>
-          <img src={selectedMovie.TitleImage} alt="title"/>
+          <img src={selectedMovie.titleImage} alt="title"/>
           <span className='info'>
-            {selectedMovie.ReleaseYear} {selectedMovie.MpaRating} {formatTimeFromSeconds(selectedMovie.Duration)}
+            {selectedMovie.releaseYear} {selectedMovie.mpaRating} {formatTimeFromSeconds(selectedMovie.duration)}
           </span>
-          <span className='description'>{selectedMovie.Description}</span>
+          <span className='description'>{selectedMovie.description}</span>
           <div className="video_buttons">
             <button className='play_video'>
               <img src="/assets/icons/play-button.png" alt="Play"/>
@@ -96,11 +96,11 @@ const MainPage = () => {
             </button>
           </div>
         </div>
-        <div className="films_carusel">
+        <div className="movies_carousel">
           <ScrollingCarousel>
             {sortedTrendingNow.map(movie => (
               <img
-                src={movie.CoverImage}
+                src={movie.cover}
                 alt="Films"
                 onClick={() => _onHandleChangeMovie(movie)}
                 key={movie.id}

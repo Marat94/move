@@ -1,0 +1,99 @@
+#movies {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.movies {
+  width: 1250px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.movies-containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 70px;
+}
+
+.movies-container {
+  width: 278px;
+  height: 465px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(26 26 26);
+  border-radius: 0 0 5px 5px;
+}
+
+.movies-title {
+  padding: 8px 10px 8px 10px ;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 19px
+}
+
+.movies-cover-img {
+  width: 100%;
+  height: 414px;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: rgba(26 26 26);
+  border: none;
+}
+
+.modal-body {
+  background-color: #000000;
+}
+
+.modal-title-img {
+  width: 300px;
+  height: 60px;
+}
+
+.modal-body-container {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.modal-cover-img {
+  width: 185px;
+  height: 274px;
+}
+
+.modal-video {
+  width: 100%;
+  height: 274px;
+}
+
+
+.modal-title {
+  color: #8e8f87;
+}
+
+.modal-description, .modal-movie-info {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-description {
+  padding: 12px 0 12px 0;
+  border-bottom: 1px solid rgba(96, 91, 88, 1);
+}
+
+.modal-description .movie-cast {
+  font-weight: 600;
+}
+
+.movie-actors, .movie-director {
+  text-decoration: none;
+  margin-left: 5px;
+}

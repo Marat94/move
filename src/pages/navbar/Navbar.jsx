@@ -1,35 +1,43 @@
+import { Link } from "react-router-dom";
 import './navbar.css'
+
 
 const navbarItem = [
   {
     id: 1,
     icon: "/assets/icons/search.png",
-    name: "Search"
+    name: "Search",
+    link: "/search"
   },
   {
     id: 2,
     icon: "/assets/icons/home.png",
-    name: "Home"
+    name: "Home",
+    link: "/"
   },
   {
     id: 3,
     icon: "/assets/icons/tv_show.png",
-    name: "TV Series"
+    name: "TV Series",
+    link: "/tvSeries"
   },
   {
     id: 4,
     icon: "/assets/icons/video.png",
-    name: "Movies"
+    name: "Movies",
+    link: "/movies"
   },
   {
     id: 5,
     icon: "/assets/icons/genres.png",
-    name: "Genres"
+    name: "Genres",
+    link: "/genres"
   },
   {
     id: 6,
     icon: "/assets/icons/watch_later.png",
-    name: "Watch Later"
+    name: "Watch Later",
+    link: "/watchLater"
   },
 ]
 
@@ -37,18 +45,18 @@ const navbarItem = [
 const Navbar = ({showNavbar, setShowNavbar}) => {
 
 
-  const _onHandleOpenNavbar = () => {
+ const _onHandleOpenNavbar = () => {
     setShowNavbar(true)
   }
 
   return (
-    <div id='navigation'>
-      <div className="navigation_sidenav">
+    <div id='menu'>
+      <div className="menu_sidenav">
         <div className={`ns_container ${showNavbar ? 'open' : 'close'} `}>
           {navbarItem.map(item => (
-            <div className={`navbar_item ${showNavbar ? 'show' : 'hide'}`} onClick={_onHandleOpenNavbar} key={item.id}>
+            <div className={`menu_item ${showNavbar ? 'show' : 'hide'}`} onClick={_onHandleOpenNavbar} key={item.id}>
               <img src={item.icon} alt="Search" />
-              <span className='navbar_item_title'>{item.name}</span>
+              <Link to={item.link} className='menu_item_title'>{item.name}</Link>
             </div>
           ))}
         </div>
