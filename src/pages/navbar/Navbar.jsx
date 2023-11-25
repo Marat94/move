@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './navbar.css'
+import {forwardRef, useImperativeHandle, useState} from "react";
 
 
 const navbarItem = [
@@ -42,12 +43,21 @@ const navbarItem = [
 ]
 
 
-const Navbar = ({showNavbar, setShowNavbar}) => {
+const Navbar = forwardRef((props, ref)=> {
 
 
- const _onHandleOpenNavbar = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useImperativeHandle(ref, () => ({
+    _onHandleCloseNavbar() {
+      setShowNavbar(false)
+    }
+  }))
+
+  const _onHandleOpenNavbar = () => {
     setShowNavbar(true)
   }
+
 
   return (
     <div id='menu'>
@@ -64,6 +74,6 @@ const Navbar = ({showNavbar, setShowNavbar}) => {
       </div>
     </div>
   );
-};
+})
 
 export default Navbar;

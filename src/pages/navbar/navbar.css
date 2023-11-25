@@ -1,6 +1,7 @@
 
 #menu {
   z-index: 1;
+  position: fixed;
 }
 
 #menu .menu_sidenav {

@@ -1,17 +1,22 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import jsonData from "../../data.json";
 import {Modal, Button} from 'react-bootstrap';
+import Navbar from "../navbar/Navbar";
 import "./movies.css";
 
 
 const Movies = () => {
+  const ref = useRef(null)
+
   const [data, setData] = useState([]);
   const [modalShow, setModalShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState({});
 
+
   const onHandleShowModal = (item) => {
     setSelectedItem({...item});
     setModalShow(true);
+    ref.current._onHandleCloseNavbar()
   }
 
   useEffect(() => {
@@ -20,7 +25,12 @@ const Movies = () => {
 
   return (
     <div id="movies">
-      <div className="movies">
+      <Navbar ref={ref}/>
+      <div
+        className="movies"
+        onClick={() => {
+        ref.current._onHandleCloseNavbar()
+      }}>
         <div className="movies-containers">
           {data.map((item) => (
             item.id <= 3 && (
@@ -73,6 +83,7 @@ const Movies = () => {
         selecteditem={selectedItem}
       />
     </div>
+
   );
 };
 

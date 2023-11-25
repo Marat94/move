@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 import jsonData from '../../data.json';
 import Navbar from "../navbar/Navbar";
@@ -6,7 +6,8 @@ import './mainPage.css'
 
 const MainPage = () => {
 
-  const [showNavbar, setShowNavbar] = useState(false);
+  const ref = useRef(null)
+  // const [showNavbar, setShowNavbar] = useState(false);
   const [activeVideo, setActiveVideo] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(
     sessionStorage.getItem('movieId')
@@ -21,9 +22,7 @@ const MainPage = () => {
     }, 3000)
   }, []);
 
-  const _onHandleCloseNavbar = () => {
-    setShowNavbar(false)
-  }
+
   const formatTimeFromSeconds = (totalSeconds) => {
     const totalMinutes = Math.floor(totalSeconds / 60);
     const hours = Math.floor(totalMinutes / 60);
@@ -55,16 +54,33 @@ const MainPage = () => {
 
   return (
     <div id='main'>
-      <Navbar
-        showNavbar={showNavbar}
-        setShowNavbar={setShowNavbar}
-      />
+      <Navbar ref={ref}/>
 
-      <div id='main_page' onClick={_onHandleCloseNavbar}>
-        <div className="main_page_container">
-          {!activeVideo && (
-            <img className='mpc_photo' src={selectedMovie.backgroundImg} alt="Icon"/>
-          )}
+      <div id='main_page' onClick={() => {ref.current._onHandleCloseNavbar()}}>
+
+
+        <div
+          className="main_page_container"
+          style={{
+            backgroundImage: selectedMovie ? `url(${selectedMovie.backgroundImg})` : null,
+          }}>
+          <div className="main_page_film_description">
+            <span className='category'>{selectedMovie.Category}</span>
+            <img src={selectedMovie.titleImage} alt="title"/>
+            <span className='info'>
+            {selectedMovie.releaseYear} {selectedMovie.mpaRating} {formatTimeFromSeconds(selectedMovie.duration)}
+          </span>
+            <span className='description'>{selectedMovie.description}</span>
+            <div className="video_buttons">
+              <button className='play_video'>
+                <img src="/assets/icons/play-button.png" alt="Play"/>
+                Play
+              </button>
+              <button className='more_info'>
+                More Info
+              </button>
+            </div>
+          </div>
           {!!activeVideo && (
               <iframe
                 className='mpc_photo'
@@ -74,28 +90,11 @@ const MainPage = () => {
                 title="Video Player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                onClick={_onHandleCloseNavbar}
               />
           )}
 
         </div>
-        <div className="main_page_film_description">
-          <span className='category'>{selectedMovie.Category}</span>
-          <img src={selectedMovie.titleImage} alt="title"/>
-          <span className='info'>
-            {selectedMovie.releaseYear} {selectedMovie.mpaRating} {formatTimeFromSeconds(selectedMovie.duration)}
-          </span>
-          <span className='description'>{selectedMovie.description}</span>
-          <div className="video_buttons">
-            <button className='play_video'>
-              <img src="/assets/icons/play-button.png" alt="Play"/>
-              Play
-            </button>
-            <button className='more_info'>
-              More Info
-            </button>
-          </div>
-        </div>
+
         <div className="movies_carousel">
           <ScrollingCarousel>
             {sortedTrendingNow.map(movie => (
