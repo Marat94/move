@@ -1,13 +1,12 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import jsonData from "../../data.json";
-import {Modal, Button} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 import Navbar from "../navbar/Navbar";
 import "./movies.css";
 
 
 const Movies = () => {
   const ref = useRef(null)
-
   const [data, setData] = useState([]);
   const [modalShow, setModalShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState({});
@@ -16,12 +15,13 @@ const Movies = () => {
   const onHandleShowModal = (item) => {
     setSelectedItem({...item});
     setModalShow(true);
-    ref.current._onHandleCloseNavbar()
+    ref.current.onHandleCloseNavbar()
   }
 
   useEffect(() => {
     setData(jsonData.trendingNow.map((item) => item));
   }, []);
+
 
   return (
     <div id="movies">
@@ -29,8 +29,9 @@ const Movies = () => {
       <div
         className="movies"
         onClick={() => {
-        ref.current._onHandleCloseNavbar()
-      }}>
+          ref.current.onHandleCloseNavbar()
+        }}
+      >,,
         <div className="movies-containers">
           {data.map((item) => (
             item.id <= 3 && (
@@ -87,7 +88,7 @@ const Movies = () => {
   );
 };
 
-function MyVerticallyCenteredModal(props) {
+export function MyVerticallyCenteredModal(props) {
 
   const {
     title,

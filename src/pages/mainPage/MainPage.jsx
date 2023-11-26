@@ -1,19 +1,20 @@
 import React, {useEffect, useRef, useState} from 'react';
-import { ScrollingCarousel } from '@trendyol-js/react-carousel';
+import {ScrollingCarousel} from '@trendyol-js/react-carousel';
 import jsonData from '../../data.json';
 import Navbar from "../navbar/Navbar";
 import './mainPage.css'
 
+
 const MainPage = () => {
 
   const ref = useRef(null)
-  // const [showNavbar, setShowNavbar] = useState(false);
   const [activeVideo, setActiveVideo] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(
     sessionStorage.getItem('movieId')
       ? jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0]
       : jsonData.featured
   );
+  const [showCarousel, setShowCarousel] = useState(false);
 
 
   useEffect(() => {
@@ -42,6 +43,14 @@ const MainPage = () => {
     sessionStorage.setItem('movieId', id);
   };
 
+  const onHandleShowCarousel = () => {
+    setShowCarousel(!showCarousel);
+  }
+
+  const onHandleCloseNavbar = () => {
+    ref.current.onHandleCloseNavbar()
+  }
+
   const _onHandleChangeMovie = (movie) => {
     _onHandleAddSessionStorage(movie.id)
     setSelectedMovie(movie)
@@ -55,62 +64,62 @@ const MainPage = () => {
   return (
     <div id='main'>
       <Navbar ref={ref}/>
-
-      <div id='main_page' onClick={() => {ref.current._onHandleCloseNavbar()}}>
-
-
-        <div
-          className="main_page_container"
-          style={{
-            backgroundImage: selectedMovie ? `url(${selectedMovie.backgroundImg})` : null,
-          }}>
-          <div className="main_page_film_description">
-            <span className='category'>{selectedMovie.Category}</span>
-            <img src={selectedMovie.titleImage} alt="title"/>
-            <span className='info'>
-            {selectedMovie.releaseYear} {selectedMovie.mpaRating} {formatTimeFromSeconds(selectedMovie.duration)}
+      <div id='main_page' onClick={onHandleCloseNavbar}>
+        <div className="main_page_film_description">
+          <span className='category'>{selectedMovie.Category}</span>
+          <img className="movie-title-img" src={selectedMovie.titleImage} alt="title"/>
+          <span className='info'>
+            {selectedMovie.releaseYear} {selectedMovie.mpaRating} {selectedMovie.duration}
           </span>
-            <span className='description'>{selectedMovie.description}</span>
-            <div className="video_buttons">
-              <button className='play_video'>
-                <img src="/assets/icons/play-button.png" alt="Play"/>
-                Play
-              </button>
-              <button className='more_info'>
-                More Info
-              </button>
-            </div>
+          <span className='description'>{selectedMovie.description}</span>
+          <div className="video_buttons">
+            <button className='play_video'>
+              <img src="/assets/icons/play-button.svg" alt="Play"/>
+              Play
+            </button>
+            <button className='more_info'>
+              More Info
+            </button>
           </div>
-          {!!activeVideo && (
-              <iframe
-                className='mpc_photo'
-                width="640"
-                height="360"
-                src={activeVideo}
-                title="Video Player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-          )}
+        </div>
 
+        <div className="main_page_container">
+          {activeVideo && (
+            <iframe
+              className='movie-trailer'
+              width="640"
+              height="360"
+              src={activeVideo}
+              title="Video Player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          )}
         </div>
 
         <div className="movies_carousel">
-          <ScrollingCarousel>
-            {sortedTrendingNow.map(movie => (
-              <img
-                src={movie.cover}
-                alt="Films"
-                onClick={() => _onHandleChangeMovie(movie)}
-                key={movie.id}
-              />
-            ))}
-          </ScrollingCarousel>
+          <button className="carousel-button" onClick={onHandleShowCarousel}>
+            <img
+              className="carousel-button-arrow"
+              src={showCarousel ? "/assets/icons/up-fill.svg" : "/assets/icons/down-fill.svg"}
+              alt="arrow"/>
+          </button>
+          {showCarousel && (
+            <ScrollingCarousel>
+              {sortedTrendingNow.map(movie => (
+                <img
+                  className="scroll-images"
+                  src={movie.cover}
+                  alt="Films"
+                  onClick={() => _onHandleChangeMovie(movie)}
+                  key={movie.id}
+                />
+              ))}
+            </ScrollingCarousel>
+          )}
         </div>
-
       </div>
     </div>
-
   );
 };
 

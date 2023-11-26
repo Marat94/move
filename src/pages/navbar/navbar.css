@@ -24,9 +24,16 @@
   cursor: pointer;
   padding: 14px 8px 14px 8px;
   width: 100%;
+  border-radius: 10px;
+  -webkit-transition:  background-color .2s ease-out;
+  -moz-transition:  background-color .2s ease-out;
+  -o-transition:  background-color .2s ease-out;
+  transition: background-color .3s ease-out;
+
 }
 
 #menu .menu_sidenav .ns_container .menu_item img {
+  text-decoration: none;
   width: 25px;
   height: 25px;
 }
@@ -53,13 +60,11 @@
 
 #menu .menu_sidenav .ns_container .menu_item.show:hover {
   width: 100%;
-  border-radius: 14px;
   background-color: #3c3c3c;
 }
 
 #menu .menu_sidenav .ns_container .menu_item.hide:hover {
   width: 100%;
-  border-radius: 10px;
   background-color: #3c3c3c;
 }
 

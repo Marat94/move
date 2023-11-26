@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import './navbar.css'
-import {forwardRef, useImperativeHandle, useState} from "react";
+import {forwardRef, useImperativeHandle, useContext, useState} from "react";
 
 
 const navbarItem = [
@@ -43,30 +43,29 @@ const navbarItem = [
 ]
 
 
-const Navbar = forwardRef((props, ref)=> {
-
+const Navbar = forwardRef((props, ref) => {
 
   const [showNavbar, setShowNavbar] = useState(false);
 
   useImperativeHandle(ref, () => ({
-    _onHandleCloseNavbar() {
+    onHandleCloseNavbar() {
       setShowNavbar(false)
     }
   }))
 
-  const _onHandleOpenNavbar = () => {
+
+  const onHandleOpenNavbar = () => {
     setShowNavbar(true)
   }
-
 
   return (
     <div id='menu'>
       <div className="menu_sidenav">
         <div className={`ns_container ${showNavbar ? 'open' : 'close'} `}>
           {navbarItem.map(item => (
-            <div className={`menu_item ${showNavbar ? 'show' : 'hide'}`} onClick={_onHandleOpenNavbar} key={item.id}>
-              <img src={item.icon} alt="Search" />
-              <Link to={item.link} className='menu_item_title'>{item.name}</Link>
+            <div className={`menu_item ${showNavbar ? 'show' : 'hide'}`} key={item.id} onClick={onHandleOpenNavbar}>
+              <Link to={item.link}><img src={item.icon} alt="Search"/></Link>
+              <Link to={item.link} className='menu_item_title'>{item.name} </Link>
             </div>
           ))}
         </div>
