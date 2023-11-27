@@ -17,7 +17,7 @@
   height: 100%;
 }
 
-.movie-trailer {
+.movie-trailer, .main-featured-video  {
   width: 50%;
   height: 50%;
   position: absolute;
@@ -27,7 +27,7 @@
   left: 650px;
 }
 
-.main_page_film_description {
+.main_page_movie_description {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -37,12 +37,12 @@
   left: 140px;
 }
 
-.main_page_film_description .video_buttons {
+.main_page_movie_description .video_buttons {
   display: flex;
   justify-content: start;
 }
 
-.main_page_film_description {
+.main_page_movie_description {
   color: #828284;
   font-size: 22px;
 }
@@ -83,7 +83,7 @@
 }
 
 
-.main_page_film_description {
+.main_page_movie_description {
   color: #f8f8fa;
   font-size: 16px;
   margin-top: 24px;

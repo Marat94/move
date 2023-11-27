@@ -418,5 +418,49 @@
       "video": "/assets/videos/theGentlemen.mp4",
       "description": "An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him."
     }
+  ],
+  "navbarItem": [
+    {
+      "id": "1",
+      "icon": "/assets/icons/profile.svg",
+      "name": "Mike",
+      "link": ""
+    },
+    {
+      "id": "2",
+      "icon": "/assets/icons/search.svg",
+      "name": "Search",
+      "link": "/search"
+    },
+    {
+      "id": "3",
+      "icon": "/assets/icons/home.svg",
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "id": "4",
+      "icon": "/assets/icons/tv-show.svg",
+      "name": "TV Series",
+      "link": "/tvSeries"
+    },
+    {
+      "id": "5",
+      "icon": "/assets/icons/movie.svg",
+      "name": "Movies",
+      "link": "/movies"
+    },
+    {
+      "id": "6",
+      "icon": "/assets/icons/popular.svg",
+      "name": "Popular",
+      "link": "/popular"
+    },
+    {
+      "id": "7",
+      "icon": "/assets/icons/watchlist.svg",
+      "name": "Watchlist",
+      "link": "/watchlist"
+    }
   ]
 }

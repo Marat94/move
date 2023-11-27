@@ -54,8 +54,7 @@ const Movies = () => {
                 <img
                   className="movies-cover-img"
                   src={item.cover}
-                  alt={item.title}
-                  onClick={() => onHandleShowModal(item)}
+                  alt={item.title}                 onClick={() => onHandleShowModal(item)}
                 />
                 <span className="movies-title">{item.title}</span>
               </div>

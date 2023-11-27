@@ -2,11 +2,44 @@
 #menu {
   z-index: 1;
   position: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 #menu .menu_sidenav {
   width: 72px;
 }
+
+#menu .menu_sidenav .menu-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  width: 100%;
+  padding: 14px 8px 14px 8px;
+}
+
+#menu .menu_sidenav .menu-profile .menu-profile-img {
+  width: 35px;
+  height: 35px;
+}
+#menu .menu_sidenav .menu-profile .menu-profile-title {
+  color: #87837b;
+  margin-left: 20px;
+  display: none;
+  cursor: pointer;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .3s ease-out;
+}
+
+#menu .menu_sidenav .menu-profile.show .menu-profile-title {
+  display: block;
+}
+
+#menu .menu_sidenav .menu-profile.show .menu-profile-title:hover {
+  color: #f5c518;
+}
+
 
 #menu .menu_sidenav .ns_container {
   display: flex;
@@ -14,8 +47,9 @@
   align-items: start;
   justify-content: start;
   height: 100vh;
-  padding: 148px 16px;
+  padding: 60px 16px;
 }
+
 
 #menu .menu_sidenav .ns_container .menu_item {
   display: flex;
@@ -34,15 +68,16 @@
 
 #menu .menu_sidenav .ns_container .menu_item img {
   text-decoration: none;
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
 }
+
+
 
 #menu .menu_sidenav .ns_container .menu_item .menu_item_title  {
   color: #87837b;
   margin-left: 20px;
   text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 #menu .menu_sidenav .ns_container .menu_item.show .menu_item_title  {
