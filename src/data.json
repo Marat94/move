@@ -435,8 +435,7 @@
     {
       "id": "3",
       "icon": "/assets/icons/home.svg",
-      "name": "Home",
-      "link": "/"
+      "name": "Home"
     },
     {
       "id": "4",

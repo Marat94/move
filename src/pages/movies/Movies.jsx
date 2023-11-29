@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import jsonData from "../../data.json";
 import {Modal} from 'react-bootstrap';
 import Navbar from "../navbar/Navbar";
 import "./movies.css";
+import Wrapper from "../wrapper/Wrapper";
 
 
 const Movies = () => {
@@ -24,66 +25,68 @@ const Movies = () => {
 
 
   return (
-    <div id="movies">
-      <Navbar ref={ref}/>
-      <div
-        className="movies"
-        onClick={() => {
-          ref.current.onHandleCloseNavbar()
-        }}
-      >,,
-        <div className="movies-containers">
-          {data.map((item) => (
-            item.id <= 3 && (
-              <div className="movies-container" key={item.id}>
-                <img
-                  className="movies-cover-img"
-                  src={item.cover}
-                  alt={item.title}
-                  onClick={() => onHandleShowModal(item)}
-                />
-                <span className="movies-title">{item.title}</span>
-              </div>
-            )
-          ))}
+    <Wrapper>
+      <div id="movies">
+        <Navbar ref={ref}/>
+        <div
+          className="movies"
+          onClick={() => {
+            ref.current.onHandleCloseNavbar()
+          }}
+        >,,
+          <div className="movies-containers">
+            {data.map((item) => (
+              item.id <= 3 && (
+                <div className="movies-container" key={item.id}>
+                  <img
+                    className="movies-cover-img"
+                    src={item.cover}
+                    alt={item.title}
+                    onClick={() => onHandleShowModal(item)}
+                  />
+                  <span className="movies-title">{item.title}</span>
+                </div>
+              )
+            ))}
+          </div>
+          <div className="movies-containers">
+            {data.map((item) => (
+              item.id > 3 && item.id <= 6 && (
+                <div className="movies-container" key={item.id}>
+                  <img
+                    className="movies-cover-img"
+                    src={item.cover}
+                    alt={item.title} onClick={() => onHandleShowModal(item)}
+                  />
+                  <span className="movies-title">{item.title}</span>
+                </div>
+              )
+            ))}
+          </div>
+          <div className="movies-containers">
+            {data.map((item) => (
+              item.id > 6 && item.id <= 9 && (
+                <div className="movies-container" key={item.id}>
+                  <img
+                    className="movies-cover-img"
+                    src={item.cover}
+                    alt={item.title}
+                    onClick={() => onHandleShowModal(item)}
+                  />
+                  <span className="movies-title">{item.title}</span>
+                </div>
+              )
+            ))}
+          </div>
         </div>
-        <div className="movies-containers">
-          {data.map((item) => (
-            item.id > 3 && item.id <= 6 && (
-              <div className="movies-container" key={item.id}>
-                <img
-                  className="movies-cover-img"
-                  src={item.cover}
-                  alt={item.title}                 onClick={() => onHandleShowModal(item)}
-                />
-                <span className="movies-title">{item.title}</span>
-              </div>
-            )
-          ))}
-        </div>
-        <div className="movies-containers">
-          {data.map((item) => (
-            item.id > 6 && item.id <= 9 && (
-              <div className="movies-container" key={item.id}>
-                <img
-                  className="movies-cover-img"
-                  src={item.cover}
-                  alt={item.title}
-                  onClick={() => onHandleShowModal(item)}
-                />
-                <span className="movies-title">{item.title}</span>
-              </div>
-            )
-          ))}
-        </div>
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          selecteditem={selectedItem}
+        />
       </div>
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        selecteditem={selectedItem}
-      />
-    </div>
 
+    </Wrapper>
   );
 };
 

@@ -2,7 +2,9 @@ import React, {useEffect, useRef, useState} from 'react';
 import {ScrollingCarousel} from '@trendyol-js/react-carousel';
 import jsonData from '../../data.json';
 import Navbar from "../navbar/Navbar";
+import Wrapper from "../wrapper/Wrapper";
 import './mainPage.css'
+import TransitionWrapper from "react-bootstrap/TransitionWrapper";
 
 
 const MainPage = () => {
@@ -62,71 +64,74 @@ const MainPage = () => {
 
 
   return (
-    <div id='main'>
-      <iframe
-        className="main-featured-video"
-        src="/assets/videos/theIrishman.mp4"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Video Player"
-      />
-      <Navbar ref={ref}/>
-      <div id='main_page' onClick={onHandleCloseNavbar}>
-        <div className="main_page_movie_description">
-          <span className='category'>{selectedMovie.Category}</span>
-          <img className="movie-title-img" src={selectedMovie.titleImage} alt="title"/>
-          <span className='info'>
+    <Wrapper>
+      <div id='main' >
+        <iframe
+          className="main-featured-video"
+          src="/assets/videos/theIrishman.mp4"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Video Player"
+        />
+        <Navbar ref={ref}/>
+        <div id='main_page' onClick={onHandleCloseNavbar} >
+          <div className="main_page_movie_description">
+            <span className='category'>{selectedMovie.Category}</span>
+            <img className="movie-title-img" src={selectedMovie.titleImage} alt="title"/>
+            <span className='info'>
             {selectedMovie.releaseYear} {selectedMovie.mpaRating} {selectedMovie.duration}
           </span>
-          <span className='description'>{selectedMovie.description}</span>
-          <div className="video_buttons">
-            <button className='play_video'>
-              <img src="/assets/icons/play-button.svg" alt="Play"/>
-              Play
+            <span className='description'>{selectedMovie.description}</span>
+            <div className="video_buttons">
+              <button className='play_video'>
+                <img src="/assets/icons/play-button.svg" alt="Play"/>
+                Play
+              </button>
+              <button className='more_info'>
+                More Info
+              </button>
+            </div>
+          </div>
+
+          <div className="main_page_container">
+            {activeVideo && (
+              <iframe
+                className='movie-trailer'
+                width="640"
+                height="360"
+                src={activeVideo}
+                title="Video Player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
+          </div>
+
+          <div className="movies_carousel">
+            <button className="carousel-button" onClick={onHandleShowCarousel}>
+              <img
+                className="carousel-button-arrow"
+                src={showCarousel ? "/assets/icons/up-fill.svg" : "/assets/icons/down-fill.svg"}
+                alt="arrow"/>
             </button>
-            <button className='more_info'>
-              More Info
-            </button>
+            {showCarousel && (
+              <ScrollingCarousel>
+                {sortedTrendingNow.map(movie => (
+                  <img
+                    className="scroll-images"
+                    src={movie.cover}
+                    alt="Films"
+                    onClick={() => _onHandleChangeMovie(movie)}
+                    key={movie.id}
+                  />
+                ))}
+              </ScrollingCarousel>
+            )}
           </div>
         </div>
-
-        <div className="main_page_container">
-          {activeVideo && (
-            <iframe
-              className='movie-trailer'
-              width="640"
-              height="360"
-              src={activeVideo}
-              title="Video Player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          )}
-        </div>
-
-        <div className="movies_carousel">
-          <button className="carousel-button" onClick={onHandleShowCarousel}>
-            <img
-              className="carousel-button-arrow"
-              src={showCarousel ? "/assets/icons/up-fill.svg" : "/assets/icons/down-fill.svg"}
-              alt="arrow"/>
-          </button>
-          {showCarousel && (
-            <ScrollingCarousel>
-              {sortedTrendingNow.map(movie => (
-                <img
-                  className="scroll-images"
-                  src={movie.cover}
-                  alt="Films"
-                  onClick={() => _onHandleChangeMovie(movie)}
-                  key={movie.id}
-                />
-              ))}
-            </ScrollingCarousel>
-          )}
-        </div>
       </div>
-    </div>
+    </Wrapper>
+
   );
 };
 
