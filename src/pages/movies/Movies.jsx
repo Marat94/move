@@ -33,49 +33,18 @@ const Movies = () => {
           onClick={() => {
             ref.current.onHandleCloseNavbar()
           }}
-        >,,
+        >
           <div className="movies-containers">
             {data.map((item) => (
-              item.id <= 3 && (
-                <div className="movies-container" key={item.id}>
-                  <img
-                    className="movies-cover-img"
-                    src={item.cover}
-                    alt={item.title}
-                    onClick={() => onHandleShowModal(item)}
-                  />
-                  <span className="movies-title">{item.title}</span>
-                </div>
-              )
-            ))}
-          </div>
-          <div className="movies-containers">
-            {data.map((item) => (
-              item.id > 3 && item.id <= 6 && (
-                <div className="movies-container" key={item.id}>
-                  <img
-                    className="movies-cover-img"
-                    src={item.cover}
-                    alt={item.title} onClick={() => onHandleShowModal(item)}
-                  />
-                  <span className="movies-title">{item.title}</span>
-                </div>
-              )
-            ))}
-          </div>
-          <div className="movies-containers">
-            {data.map((item) => (
-              item.id > 6 && item.id <= 9 && (
-                <div className="movies-container" key={item.id}>
-                  <img
-                    className="movies-cover-img"
-                    src={item.cover}
-                    alt={item.title}
-                    onClick={() => onHandleShowModal(item)}
-                  />
-                  <span className="movies-title">{item.title}</span>
-                </div>
-              )
+              <div className="movies-container" key={item.id}>
+                <img
+                  className="movies-cover-img"
+                  src={item.cover}
+                  alt={item.title}
+                  onClick={() => onHandleShowModal(item)}
+                />
+                <span className="movies-title">{item.title}</span>
+              </div>
             ))}
           </div>
         </div>
