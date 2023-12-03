@@ -29,14 +29,14 @@ const Movies = () => {
       <div id="movies">
         <Navbar ref={ref}/>
         <div
-          className="movies"
-          onClick={() => {
-            ref.current.onHandleCloseNavbar()
-          }}
+          className="movies-section"
+          onClick={() => {ref.current.onHandleCloseNavbar()}}
         >
           <div className="movies-containers">
-            {data.map((item) => (
-              <div className="movies-container" key={item.id}>
+            { data
+              .filter(item => item.Category === "Movie")
+              .map(item => (
+              <div className="movies-item" key={item.id}>
                 <img
                   className="movies-cover-img"
                   src={item.cover}

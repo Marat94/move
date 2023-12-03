@@ -422,41 +422,29 @@
   "navbarItem": [
     {
       "id": "1",
-      "icon": "/assets/icons/profile.svg",
-      "name": "Mike",
-      "link": ""
-    },
-    {
-      "id": "2",
-      "icon": "/assets/icons/search.svg",
-      "name": "Search",
-      "link": "/search"
-    },
-    {
-      "id": "3",
       "icon": "/assets/icons/home.svg",
       "name": "Home"
     },
     {
-      "id": "4",
+      "id": "2",
       "icon": "/assets/icons/tv-show.svg",
       "name": "TV Series",
       "link": "/tvSeries"
     },
     {
-      "id": "5",
+      "id": "3",
       "icon": "/assets/icons/movie.svg",
       "name": "Movies",
       "link": "/movies"
     },
     {
-      "id": "6",
+      "id": "4",
       "icon": "/assets/icons/popular.svg",
       "name": "Popular",
       "link": "/popular"
     },
     {
-      "id": "7",
+      "id": "5",
       "icon": "/assets/icons/watchlist.svg",
       "name": "Watchlist",
       "link": "/watchlist"

@@ -11,6 +11,7 @@ const Header = () => {
       <div className="header-buttons">
         <button className="sign-up-btn">Sign up</button>
         <button className="sign-in-btn">Sign In</button>
+        <img className="list-btn" src="/assets/icons/list.svg" alt="list"/>
       </div>
     </div>
   )

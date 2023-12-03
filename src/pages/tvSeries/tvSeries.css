@@ -1,0 +1,50 @@
+#tv-series {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  z-index: 2;
+}
+
+.tv-series-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.tv-series-section .tv-series-containers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px 40px;
+  flex-wrap: wrap;
+  padding: 80px 72px;
+}
+
+.tv-series-section .tv-series-containers .tv-series-item {
+  width: 240px;
+  height: 374px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(26 26 26);
+  border-radius: 0 0 5px 5px;
+}
+
+.tv-series-section .tv-series-containers .tv-series-item .tv-series-img {
+  width: 100%;
+  height: 332px;
+  cursor: pointer;
+}
+
+
+.tv-series-section .tv-series-containers .tv-series-item .tv-series-title {
+  padding: 8px 10px 8px 10px ;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 16px
+}

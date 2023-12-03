@@ -7,39 +7,8 @@
 
 #menu .menu_sidenav {
   width: 72px;
-}
 
-#menu .menu_sidenav .menu-profile {
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
-  width: 100%;
-  padding: 14px 8px 14px 8px;
 }
-
-#menu .menu_sidenav .menu-profile .menu-profile-img {
-  width: 35px;
-  height: 35px;
-}
-#menu .menu_sidenav .menu-profile .menu-profile-title {
-  color: #87837b;
-  margin-left: 20px;
-  display: none;
-  cursor: pointer;
-  -webkit-transition: color .2s ease-out;
-  -moz-transition: color .2s ease-out;
-  -o-transition: color .2s ease-out;
-  transition: color .3s ease-out;
-}
-
-#menu .menu_sidenav .menu-profile.show .menu-profile-title {
-  display: block;
-}
-
-#menu .menu_sidenav .menu-profile.show .menu-profile-title:hover {
-  color: #f5c518;
-}
-
 
 #menu .menu_sidenav .ns_container {
   display: flex;
@@ -63,7 +32,6 @@
   -moz-transition:  background-color .2s ease-out;
   -o-transition:  background-color .2s ease-out;
   transition: background-color .3s ease-out;
-
 }
 
 #menu .menu_sidenav .ns_container .menu_item img {
@@ -116,10 +84,10 @@
 #menu .menu_sidenav .ns_container.open {
   width: 192px;
   background-color: #000;
+  opacity: 0.9;
   box-shadow: 200px 3px 98px 42px rgba(0,0,0,0.75);
   -webkit-box-shadow: 200px 3px 98px 42px rgba(0,0,0,0.75);
   -moz-box-shadow: 200px 3px 98px 42px rgba(0,0,0,0.75);
-
   -webkit-transition: width .3s ease-out, box-shadow .3s ease-out;
   -moz-transition: width .3s ease-out, box-shadow .3s ease-out;
   -o-transition: width .3s ease-out, box-shadow .3s ease-out;
