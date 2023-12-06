@@ -4,7 +4,6 @@ import jsonData from '../../data.json';
 import Navbar from "../navbar/Navbar";
 import Wrapper from "../wrapper/Wrapper";
 import './mainPage.css'
-import TransitionWrapper from "react-bootstrap/TransitionWrapper";
 
 
 const MainPage = () => {
@@ -79,7 +78,7 @@ const MainPage = () => {
             <span className='category'>{selectedMovie.Category}</span>
             <img className="movie-title-img" src={selectedMovie.titleImage} alt="title"/>
             <span className='info'>
-            {selectedMovie.releaseYear} {selectedMovie.mpaRating} {selectedMovie.duration}
+            {selectedMovie.releaseYear} {selectedMovie.rating} {selectedMovie.duration}
           </span>
             <span className='description'>{selectedMovie.description}</span>
             <div className="video_buttons">
@@ -119,7 +118,7 @@ const MainPage = () => {
                 {sortedTrendingNow.map(movie => (
                   <img
                     className="scroll-images"
-                    src={movie.cover}
+                    src={movie.image}
                     alt="Films"
                     onClick={() => _onHandleChangeMovie(movie)}
                     key={movie.id}

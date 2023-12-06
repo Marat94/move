@@ -1,9 +1,9 @@
 import React, {useEffect, useRef, useState} from "react";
 import jsonData from "../../data.json";
-import {Modal} from 'react-bootstrap';
 import Navbar from "../navbar/Navbar";
-import "./movies.css";
 import Wrapper from "../wrapper/Wrapper";
+import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
+import "./movies.css";
 
 
 const Movies = () => {
@@ -39,7 +39,7 @@ const Movies = () => {
               <div className="movies-item" key={item.id}>
                 <img
                   className="movies-cover-img"
-                  src={item.cover}
+                  src={item.image}
                   alt={item.title}
                   onClick={() => onHandleShowModal(item)}
                 />
@@ -58,56 +58,5 @@ const Movies = () => {
     </Wrapper>
   );
 };
-
-export function MyVerticallyCenteredModal(props) {
-
-  const {
-    title,
-    cover,
-    description,
-    mpaRating,
-    video,
-    titleImage,
-    releaseYear,
-    duration,
-    director,
-    actors
-  } = props.selecteditem
-
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header className="modal-header" closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          <img className="modal-title-img" src={titleImage} alt={title}/>
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body className="modal-body">
-        <div className="modal-body-container">
-          <div>
-            <p className="modal-movie-info">{releaseYear} • {mpaRating} • {duration} </p>
-            <img className="modal-cover-img" src={cover} alt={title}/>
-          </div>
-          <iframe className="modal-video" src={video} controls/>
-        </div>
-        <div className="modal-description">{description}</div>
-        <div className="modal-description">
-          <span>Director:</span>
-          <a className="movie-director" href={director && director.link} target="_blank">{director && director.name}</a>
-        </div>
-        <div className="modal-description">
-          <span className="movie-cast">Cast:</span>
-          {actors && actors.map((v, index) => (
-            <a className="movie-actors" key={index} href={v.link} target="_blank">{v.name}</a>
-          ))}
-        </div>
-      </Modal.Body>
-    </Modal>
-  );
-}
 
 export default Movies;
