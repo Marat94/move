@@ -2,8 +2,8 @@ import React, {useEffect, useRef, useState} from "react";
 import Wrapper from "../wrapper/Wrapper";
 import jsonData from "../../data.json"
 import Navbar from "../navbar/Navbar";
-import "./tvSeries.css"
 import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
+import "./tvSeries.css"
 
 const TvSeries = () => {
 

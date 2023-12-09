@@ -32,6 +32,32 @@
   color: #1a1a1a;
 }
 
+
+.header-search {
+  background-color: #f8f8fa;
+  border-radius: 5px
+}
+
+
+.header-search .search-input {
+  background-color: inherit;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 4px 10px 4px 10px;
+  width: 500px;
+}
+
+.header-search .search-input:focus {
+  border: 2px solid #f5c518;
+}
+
+.header-search .search-icon {
+  width: 28px;
+  height: 28px;
+  padding: 5px 5px 5px 5px;
+}
+
 .header-buttons {
   margin-right: 30px;
   display: flex;
@@ -76,4 +102,17 @@
 
 .list-btn:hover {
 
+}
+
+@media (max-width: 900px) {
+  .header-search .search-input {
+    width: 200px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header-search {
+    display: none;
+  }
 }

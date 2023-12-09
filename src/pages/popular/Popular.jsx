@@ -3,10 +3,10 @@ import {ScrollingCarousel} from '@trendyol-js/react-carousel';
 import jsonData from '../../data.json';
 import Navbar from "../navbar/Navbar";
 import Wrapper from "../wrapper/Wrapper";
-import './mainPage.css'
+import './popular.css'
 
 
-const MainPage = () => {
+const Popular = () => {
 
   const ref = useRef(null)
   const [activeVideo, setActiveVideo] = useState('');
@@ -134,4 +134,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default Popular;
