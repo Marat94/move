@@ -423,7 +423,8 @@
     {
       "id": "1",
       "icon": "/assets/icons/home.svg",
-      "name": "Home"
+      "name": "Home",
+      "link": "/"
     },
     {
       "id": "2",
