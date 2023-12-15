@@ -1,0 +1,42 @@
+#homepage {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 5;
+  top: 61px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.homepage-about-movies {
+  width: 1300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.homepage-about-movies .movies-carousel {
+  width: 100%;
+  height: auto;
+}
+
+.homepage-about-movies .homepage-browse-movies {
+  width: 500px;
+  height: 550px;
+}
+
+
+@media (max-width: 1024px) {
+  .homepage-about-movies {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage-about-movies .homepage-browse-movies {
+   display: none;
+  }
+}

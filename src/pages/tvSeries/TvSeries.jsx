@@ -4,6 +4,7 @@ import jsonData from "../../data.json"
 import Navbar from "../navbar/Navbar";
 import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
 import "./tvSeries.css"
+import MyCarousel from "../home/BrowseMovieCarousel";
 
 const TvSeries = () => {
 
@@ -46,6 +47,7 @@ const TvSeries = () => {
                 </div>
               ))}
           </div>
+          <MyCarousel />
         </div>
         <MyVerticallyCenteredModal
           show={modalShow}
