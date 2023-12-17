@@ -1,16 +1,4 @@
 {
-  "featured": {
-    "id": "1",
-    "title": "The Irishman",
-    "image": "/assets/FeaturedCover.png",
-    "titleImage": "/assets/featuredTitleImage.png",
-    "date": "2021-10-24T12:16:50.894556",
-    "releaseYear": "2021",
-    "rating": "18+",
-    "Category": "Movie",
-    "duration": "6000",
-    "description": "An illustration of Frank Sheeran's life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa."
-  },
   "trendingNow": [
     {
       "id": "1",

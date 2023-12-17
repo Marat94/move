@@ -1,8 +1,9 @@
 import React, {useRef} from "react";
 import Navbar from "../navbar/Navbar"
 import Wrapper from "../wrapper/Wrapper";
-import "./home.css"
 import BrowseMovieCarousel from "./BrowseMovieCarousel";
+import Featured from "./featured/Featured";
+import "./home.css"
 
 const Home = () => {
 
@@ -16,14 +17,11 @@ const Home = () => {
         onClick={() => {ref.current.onHandleCloseNavbar()}}
       >
         <div className="homepage-about-movies">
-          <div className="movies-carousel">
             <BrowseMovieCarousel />
-          </div>
-          <div className="homepage-browse-movies">
-
-          </div>
         </div>
+        <Featured />
       </div>
+
     </Wrapper>
   )
 }

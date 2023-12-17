@@ -1,5 +1,6 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
+import "./browseMovieCarousel.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BrowseMovieCarousel = () => {
@@ -7,24 +8,21 @@ const BrowseMovieCarousel = () => {
     <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="/assets/avengers-endgame.png"
+          className="d-block browse-movie-img"
+          src="/assets/ford-vs-ferrari.png"
           alt="First slide"
-          style={{height: "550px"}}
         />
         <Carousel.Caption>
-          <h3>Avengers: Endgame</h3>
-          <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+          <h3>Ford v Ferrari</h3>
+          <p>American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block browse-movie-img"
           src="/assets/spider-man.png"
           alt="Second slide"
-          style={{height: "550px"}}
         />
-
         <Carousel.Caption>
           <h3>Spider-Man: No Way To Home</h3>
           <p>With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.</p>
@@ -32,10 +30,9 @@ const BrowseMovieCarousel = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block browse-movie-img"
           src="/assets/the-marvels.png"
           alt="Third slide"
-          style={{height: "550px"}}
         />
 
         <Carousel.Caption>

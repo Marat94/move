@@ -24,15 +24,6 @@ const Popular = () => {
     }, 3000)
   }, []);
 
-
-  const formatTimeFromSeconds = (totalSeconds) => {
-    const totalMinutes = Math.floor(totalSeconds / 60);
-    const hours = Math.floor(totalMinutes / 60);
-    const minutes = totalMinutes % 60;
-
-    return hours + "h " + minutes + "m";
-  };
-
   const sortedTrendingNow = [...jsonData.trendingNow].sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
@@ -64,16 +55,9 @@ const Popular = () => {
 
   return (
     <Wrapper>
-      <div id='main' >
-        <iframe
-          className="main-featured-video"
-          src="/assets/videos/theIrishman.mp4"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Video Player"
-        />
+      <div id='main'>
         <Navbar ref={ref}/>
-        <div id='main_page' onClick={onHandleCloseNavbar} >
+        <div id='main_page' onClick={onHandleCloseNavbar}>
           <div className="main_page_movie_description">
             <span className='category'>{selectedMovie.Category}</span>
             <img className="movie-title-img" src={selectedMovie.titleImage} alt="title"/>
@@ -130,7 +114,6 @@ const Popular = () => {
         </div>
       </div>
     </Wrapper>
-
   );
 };
 

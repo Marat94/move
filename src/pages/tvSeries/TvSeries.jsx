@@ -47,7 +47,6 @@ const TvSeries = () => {
                 </div>
               ))}
           </div>
-          <MyCarousel />
         </div>
         <MyVerticallyCenteredModal
           show={modalShow}
