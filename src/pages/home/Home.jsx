@@ -4,6 +4,7 @@ import Wrapper from "../wrapper/Wrapper";
 import BrowseMovieCarousel from "./BrowseMovieCarousel";
 import Featured from "./featured/Featured";
 import "./home.css"
+import Watch from "./watch/Watch";
 
 const Home = () => {
 
@@ -14,12 +15,15 @@ const Home = () => {
       <Navbar ref={ref}/>
       <div
         id="homepage"
-        onClick={() => {ref.current.onHandleCloseNavbar()}}
+        onClick={() => {
+          ref.current.onHandleCloseNavbar()
+        }}
       >
         <div className="homepage-about-movies">
-            <BrowseMovieCarousel />
+          <BrowseMovieCarousel/>
         </div>
-        <Featured />
+        <Featured/>
+        <Watch/>
       </div>
 
     </Wrapper>

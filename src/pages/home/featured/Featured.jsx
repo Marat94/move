@@ -22,6 +22,7 @@ const Featured = () => {
                 className="featured-img"
                 src={item.image}
                 alt="image"
+                key={item.id}
               />
             ))}
           </ScrollingCarousel>

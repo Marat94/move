@@ -10,11 +10,7 @@ const Popular = () => {
 
   const ref = useRef(null)
   const [activeVideo, setActiveVideo] = useState('');
-  const [selectedMovie, setSelectedMovie] = useState(
-    sessionStorage.getItem('movieId')
-      ? jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0]
-      : jsonData.featured
-  );
+  const [selectedMovie, setSelectedMovie] = useState(sessionStorage.getItem(jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0]))
   const [showCarousel, setShowCarousel] = useState(false);
 
 
