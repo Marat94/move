@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {ScrollingCarousel} from "@trendyol-js/react-carousel";
-import jsonData from "../../../data.json"
-import "./watch.css"
+import jsonData from "../../../../data.json"
+import "./topPicks.css"
 
-const Watch = () => {
+const TopPicks = () => {
 
   const [data, setData] = useState([])
   useEffect(() => {
@@ -13,10 +13,10 @@ const Watch = () => {
   return (
     <div id="watch">
       <div className="watch-items">
-        <h1 className="watch-headline">What to watch</h1>
         <div>
-          <div>
-            Top Picks
+          <h1 className="watch-headline">What to watch</h1>
+          <div className="top-picks-title">
+            <span>Top Picks</span>
             <img src="/assets/icons/arrow.svg" alt="arrow"/>
           </div>
           <div className="top-picks">
@@ -43,7 +43,7 @@ const Watch = () => {
                       <img src="/assets/icons/play-white-fill.svg" alt="play"/>
                       Trailer
                     </button>
-                      <img src="/assets/icons/info.svg" alt="info"/>
+                    <img src="/assets/icons/info.svg" alt="info"/>
                   </div>
                 </div>
               ))}
@@ -51,8 +51,11 @@ const Watch = () => {
           </div>
         </div>
       </div>
+      <div>
+
+      </div>
     </div>
   )
 }
 
-export default Watch
+export default TopPicks

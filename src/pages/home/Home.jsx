@@ -3,8 +3,9 @@ import Navbar from "../navbar/Navbar"
 import Wrapper from "../wrapper/Wrapper";
 import BrowseMovieCarousel from "./BrowseMovieCarousel";
 import Featured from "./featured/Featured";
+import TopPicks from "./watch/topPicks/TopPicks";
+import Top from "./watch/top/Top";
 import "./home.css"
-import Watch from "./watch/Watch";
 
 const Home = () => {
 
@@ -23,7 +24,8 @@ const Home = () => {
           <BrowseMovieCarousel/>
         </div>
         <Featured/>
-        <Watch/>
+        <TopPicks/>
+        <Top/>
       </div>
 
     </Wrapper>
