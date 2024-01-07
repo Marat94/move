@@ -1,10 +1,11 @@
 import React, {useRef} from "react";
 import Navbar from "../navbar/Navbar"
 import Wrapper from "../wrapper/Wrapper";
-import BrowseMovieCarousel from "./BrowseMovieCarousel";
+import BrowseMovieCarousel from "./browseMovie/BrowseMovieCarousel";
 import Featured from "./featured/Featured";
 import TopPicks from "./watch/topPicks/TopPicks";
 import Top from "./watch/top/Top";
+import Favorites from "./watch/favorites/Favorites";
 import "./home.css"
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
         <Featured/>
         <TopPicks/>
         <Top/>
+        <Favorites />
       </div>
 
     </Wrapper>

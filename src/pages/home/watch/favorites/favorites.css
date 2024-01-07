@@ -1,0 +1,227 @@
+#favorites {
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 50px;
+}
+
+#favorites .favorites-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#favorites .favorites-items .favorites-title {
+  width: 400px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  color: #ffffff;
+  font-weight: 700;
+  border-left: 4px solid #f5c518;
+}
+
+#favorites .favorites-items .favorites-title span {
+  margin-left: 10px;
+}
+
+#favorites .favorites-items .favorites-movies {
+  width: 1300px;
+  display: flex;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items {
+  width: 200px;
+  height: 470px;
+  margin-top: 30px;
+  margin-left: 20px;
+  background-color: #1a1a1a;
+  border-radius: 0 0 5px 5px;
+}
+
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items  .favorites-img {
+  width: 100%;
+  height: 300px;
+}
+
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-rating {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-rating .favorites-rate-star-filled  {
+  width: 14px;
+  height: 14px;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-rating .favorites-movie-rate {
+  font-size: 17px;
+  font-weight: 500;
+  color: #b2b2b2;
+  margin-left: 4px;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-rating .favorites-rate-star {
+  width: 13px;
+  height: 13px;
+  margin-left: 20px;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-title {
+  font-size: 15px;
+  color: #fff;
+  margin-top: 4px;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-add-watchlist {
+  display: flex;
+  justify-content: center;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-add-watchlist .favorites-add-watchlist-button {
+  width: 185px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3px;
+  border: none;
+  border-radius: 4px;
+  color: #5799ef;
+  font-weight: 600;
+  background-color: #2c2c2c;
+  margin-top: 15px;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-info .favorites-movie-button {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  background-color: inherit;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  padding-right: 12px;
+}
+
+#favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-info .favorites-movie-button:hover {
+  background-color: #2c2c2c;
+}
+
+@media (max-width: 1280px) {
+  #favorites {
+    width: 1280px;
+  }
+
+  #favorites .favorites-items .favorites-movies {
+    width: 1280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #favorites {
+    width: 1024px;
+  }
+
+  #favorites .favorites-items .favorites-movies {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 820px) {
+  #favorites {
+    width: 820px;
+  }
+
+  #favorites .favorites-items .favorites-movies {
+    width: 820px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items {
+    width: 175px;
+    height: 380px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items  .favorites-img {
+    height: 210px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-title {
+    font-size: 13px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-add-watchlist .favorites-add-watchlist-button {
+    width: 150px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-info .favorites-movie-button {
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  #favorites {
+    width: 768px;
+  }
+
+  #favorites .favorites-items .favorites-movies {
+    width: 768px;
+  }
+}
+
+@media (max-width: 600px) {
+  #favorites {
+    width: 600px;
+  }
+
+  #favorites .favorites-items .favorites-movies {
+    width: 600px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items {
+    width: 120px;
+    height: 290px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items  .favorites-img {
+    height: 130px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-title {
+    font-size: 11px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-add-watchlist .favorites-add-watchlist-button {
+    width: 100px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  #favorites .favorites-items .favorites-movies .favorites-movies-items .favorites-movie-info .favorites-movie-button {
+    font-size: 11px;
+  }
+}

@@ -15,6 +15,7 @@
 #watch .watch-items .watch-headline {
   font-size: 32px;
   font-weight: 700;
+  text-align: center;
   line-height: 2.5rem;
   color: #f5c518;
 }

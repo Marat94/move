@@ -15,7 +15,7 @@ const Top = () => {
       <div className="top-items">
         <div>
           <div className="top-title">
-            <span>Top 10 on IMDb this week</span>
+            <span>Top 10 on 4Kmovie this week</span>
             <img src="/assets/icons/arrow.svg" alt="arrow"/>
           </div>
           <div className="top-movies">

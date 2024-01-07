@@ -4,7 +4,7 @@ import jsonData from "../../data.json"
 import Navbar from "../navbar/Navbar";
 import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
 import "./tvSeries.css"
-import MyCarousel from "../home/BrowseMovieCarousel";
+import MyCarousel from "../home/browseMovie/BrowseMovieCarousel";
 
 const TvSeries = () => {
 
