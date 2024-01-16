@@ -39,7 +39,7 @@
       "id": "2",
       "title": "Fast & Furious",
       "image": "/assets/fastCover.png",
-      "titleImage": "/assets/fasttitle.png",
+      "titleImage": "/assets/fastTitle.png",
       "date": "2021-10-12T12:16:50.894556",
       "releaseYear": "2023",
       "rating": "13+",
@@ -47,7 +47,7 @@
       "duration": "2h 21m",
       "video": "/assets/videos/fastVideo.mp4",
       "description": "Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.",
-      "actor": "Benedict Cumberbatch",
+      "actor": "Vin Diesel",
       "castLink": "https://en.wikipedia.org/wiki/Benedict_Cumberbatch",
       "director": {
         "name": "Louis Leterrier",

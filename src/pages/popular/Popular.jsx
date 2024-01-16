@@ -10,15 +10,20 @@ const Popular = () => {
 
   const ref = useRef(null)
   const [activeVideo, setActiveVideo] = useState('');
-  const [selectedMovie, setSelectedMovie] = useState(sessionStorage.getItem(jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0]))
+  const [selectedMovie, setSelectedMovie] = useState({})
   const [showCarousel, setShowCarousel] = useState(false);
 
 
   useEffect(() => {
     setTimeout(() => {
-      !!sessionStorage.getItem('movieId') && setActiveVideo(jsonData.trendingNow.filter(v => +v.id === +sessionStorage.getItem('movieId'))[0].video)
-    }, 3000)
+      const movieId = sessionStorage.getItem('movieId');
+      if (movieId && jsonData.trendingNow) {
+        const selectedMovie = jsonData.trendingNow.find(v => +v.id === +movieId);
+        setActiveVideo(selectedMovie.video);
+      }
+    }, 3000);
   }, []);
+
 
   const sortedTrendingNow = [...jsonData.trendingNow].sort((a, b) => {
     const dateA = new Date(a.date);
@@ -91,7 +96,8 @@ const Popular = () => {
               <img
                 className="carousel-button-arrow"
                 src={showCarousel ? "/assets/icons/up-fill.svg" : "/assets/icons/down-fill.svg"}
-                alt="arrow"/>
+                alt={showCarousel ? "Up Arrow" : "Down Arrow"}
+              />
             </button>
             {showCarousel && (
               <ScrollingCarousel>
